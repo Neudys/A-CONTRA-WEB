@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button"
 import Image from "next/image"
+import Link from "next/link"
 
 export function FinalCTA() {
   return (
@@ -21,7 +22,7 @@ export function FinalCTA() {
                 size="lg"
                 className="rounded-full px-10 h-14 text-lg bg-primary hover:bg-primary/90 text-white border-0 shadow-lg shadow-primary/25"
               >
-                Contáctanos ahora
+                <Link href="/contact">Contáctanos ahora</Link>
               </Button>
             </div>
           </div>

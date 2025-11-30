@@ -1,6 +1,8 @@
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import { Bear3D } from "./bear3D";
+import Link from "next/link";
+
 
 export function Hero() {
   return (
@@ -51,18 +53,18 @@ export function Hero() {
               size="lg"
               className="rounded-full px-8 h-12 text-base shadow-xl shadow-primary/20 hover:shadow-primary/30 hover:-translate-y-1 transition-all"
             >
-              Contáctanos
+              <Link href="/contact">Contactanos</Link>
             </Button>
             <Button
               variant="outline"
               size="lg"
               className="rounded-full px-8 h-12 text-base border-2 bg-transparent hover:bg-secondary/50"
             >
-              Saber más
+              <Link href="/contact">Saber más</Link>
             </Button>
           </div>
 
-          <div className="flex items-center gap-4 mt-8 pt-8 border-t border-border/50">
+          {/* <div className="flex items-center gap-4 mt-8 pt-8 border-t border-border/50">
             <div className="flex -space-x-3">
               {[1, 2, 3, 4].map((i) => (
                 <div
@@ -82,7 +84,7 @@ export function Hero() {
               <span className="font-bold text-foreground">100+</span> Proyectos
               entregados
             </div>
-          </div>
+          </div> */}
         </div>
 
         <div className="relative h-[500px] lg:h-[700px] flex items-center justify-center animate-in fade-in zoom-in-95 duration-1000 delay-300">

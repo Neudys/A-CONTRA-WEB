@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button"
 import { Check, Users } from "lucide-react"
+import Link from "next/link"
 
 export function DetailedServices() {
   return (
@@ -75,7 +76,7 @@ export function DetailedServices() {
               metodologías modernas para conectar empresas con las personas adecuadas.
             </p>
             <Button variant="outline" className="rounded-full mt-2 bg-transparent">
-              Conocer metodología
+              <Link href="/contact">Conocer metodología</Link>
             </Button>
           </div>
           <div className="relative h-[400px] rounded-3xl overflow-hidden bg-gradient-to-br from-secondary to-background p-8 flex items-center justify-center">
