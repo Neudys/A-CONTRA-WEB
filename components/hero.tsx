@@ -1,9 +1,13 @@
-import { Button } from "@/components/ui/button"
-import Image from "next/image"
+import { Button } from "@/components/ui/button";
+import Image from "next/image";
+import { Bear3D } from "./bear3D";
 
 export function Hero() {
   return (
-    <section id="home" className="relative min-h-screen flex items-center pt-20 pb-10 overflow-hidden">
+    <section
+      id="home"
+      className="relative min-h-screen flex items-center pt-20 pb-10 overflow-hidden"
+    >
       {/* Background Gradients */}
       <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-primary/10 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/3" />
       <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-secondary/50 rounded-full blur-[100px] translate-y-1/3 -translate-x-1/4" />
@@ -27,14 +31,19 @@ export function Hero() {
                 viewBox="0 0 100 10"
                 preserveAspectRatio="none"
               >
-                <path d="M0 5 Q 50 10 100 5" stroke="currentColor" strokeWidth="4" fill="none" />
+                <path
+                  d="M0 5 Q 50 10 100 5"
+                  stroke="currentColor"
+                  strokeWidth="4"
+                  fill="none"
+                />
               </svg>
             </span>
           </h1>
 
           <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-lg">
-            No necesitas una agencia, necesitas resultados con carácter. Creamos experiencias digitales que conectan y
-            venden.
+            No necesitas una agencia, necesitas resultados con carácter. Creamos
+            experiencias digitales que conectan y venden.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 mt-4">
@@ -70,7 +79,8 @@ export function Hero() {
               ))}
             </div>
             <div className="text-sm font-medium">
-              <span className="font-bold text-foreground">100+</span> Proyectos entregados
+              <span className="font-bold text-foreground">100+</span> Proyectos
+              entregados
             </div>
           </div>
         </div>
@@ -129,10 +139,10 @@ export function Hero() {
 
           {/* Bear Mascot */}
           <div className="relative w-full h-full">
-            <Image src="/glossy-translucent-3d-geometric-bear-mascot-orange.jpg" alt="A CONTRA Mascot" fill className="object-contain" priority />
+            <Bear3D />
           </div>
         </div>
       </div>
     </section>
-  )
+  );
 }
