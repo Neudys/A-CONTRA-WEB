@@ -3,7 +3,6 @@ import Image from "next/image";
 import { Bear3D } from "./bear3D";
 import Link from "next/link";
 
-
 export function Hero() {
   return (
     <section
@@ -87,9 +86,9 @@ export function Hero() {
           </div> */}
         </div>
 
-        <div className="relative h-[500px] lg:h-[700px] flex items-center justify-center animate-in fade-in zoom-in-95 duration-1000 delay-300">
-          {/* Floating elements */}
-          <div className="absolute top-1/4 left-0 p-4 bg-background/60 backdrop-blur-md border border-white/20 rounded-2xl shadow-xl z-20 animate-bounce duration-[3000ms]">
+        <div className="relative min-h-[360px] md:h-[500px] lg:h-[700px] flex items-center justify-center animate-in fade-in zoom-in-95 duration-1000 delay-300">
+          {/* Floating elements — ocultos en pantallas menores a 400px */}
+          <div className="max-[400px]:hidden absolute top-1/4 left-0 p-4 bg-background/60 backdrop-blur-md border border-white/20 rounded-2xl shadow-xl z-20 animate-bounce duration-[3000ms]">
             <div className="flex items-center gap-3">
               <div className="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center text-green-600">
                 <svg
@@ -114,7 +113,7 @@ export function Hero() {
             </div>
           </div>
 
-          <div className="absolute bottom-1/4 right-0 p-4 bg-background/60 backdrop-blur-md border border-white/20 rounded-2xl shadow-xl z-20 animate-bounce duration-[4000ms] delay-500">
+          <div className="max-[400px]:hidden absolute bottom-1/4 right-0 p-4 bg-background/60 backdrop-blur-md border border-white/20 rounded-2xl shadow-xl z-20 animate-bounce duration-[4000ms] delay-500">
             <div className="flex items-center gap-3">
               <div className="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center text-blue-600">
                 <svg
@@ -140,8 +139,27 @@ export function Hero() {
           </div>
 
           {/* Bear Mascot */}
-          <div className="relative w-full h-full">
-            <Bear3D />
+          <div className="relative flex items-center justify-center w-full">
+            <div
+              className="
+      relative
+      w-full
+      mx-auto
+      aspect-[1/1]        /* móviles muy pequeños */
+      max-w-[260px]       /* límite para pantallas ultra pequeñas */
+
+      sm:max-w-[320px]    /* phones normales */
+      sm:aspect-[4/5]
+
+      md:max-w-[380px]    /* tablets */
+      md:aspect-[3/4]
+
+      lg:max-w-[420px]    /* desktop */
+      lg:aspect-[4/5]
+    "
+            >
+              <Bear3D />
+            </div>
           </div>
         </div>
       </div>
